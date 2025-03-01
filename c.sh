@@ -18,3 +18,11 @@ echo "KEYMAP=fr" = /etc/vconsole.conf
 ln -sf /usr/share/zoneinfo/Africa/Algiers /etc/localtime
 hwclock --systohc
 
+apt install sudo grub-pc neovim network-manager
+
+useradd -mG sudo,audio,video -s /bin/bash bahaa
+echo "root:r" | chpasswd
+echo "bahaa:b" | chpasswd
+
+grub-install /dev/sda
+update-grub
