@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 mount /dev/sda1 /mnt
@@ -15,4 +17,4 @@ sudo mount --bind /run /mnt/run
 
 mv c.sh /mnt/
 chmod +x /mnt/c.sh
-chroot /mnt /bin/bash
+chroot /mnt /bin/bash -c "/c.sh"
