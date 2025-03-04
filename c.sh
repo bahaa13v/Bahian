@@ -18,7 +18,7 @@ echo "KEYMAP=fr" = /etc/vconsole.conf
 ln -sf /usr/share/zoneinfo/Africa/Algiers /etc/localtime
 hwclock --systohc
 
-apt install sudo grub-pc neovim network-manager
+apt install sudo grub-pc neovim network-manager -y
 
 useradd -mG sudo,audio,video -s /bin/bash bahaa
 echo "root:r" | chpasswd
