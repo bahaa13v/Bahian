@@ -20,9 +20,9 @@ hwclock --systohc
 
 apt install sudo grub-pc neovim network-manager -y
 
+sudo grub-install /dev/sda
+sudo update-grub
+
 useradd -mG sudo,audio,video -s /bin/bash bahaa
 echo "root:r" | chpasswd
 echo "bahaa:b" | chpasswd
-
-grub-install /dev/sda
-update-grub
