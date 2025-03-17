@@ -11,7 +11,7 @@ echo "debian" > /etc/hostname
 echo "127.0.0.1 localhost" > /etc/hosts
 echo "127.0.1.1 debian" >> /etc/hosts
 
-apt install linux-image-amd64 firmware-linux firmware-linux-nonfree -y
+apt install sudo linux-image-amd64 firmware-linux firmware-linux-nonfree -y
 
 echo "KEYMAP=fr" = /etc/vconsole.conf
 
